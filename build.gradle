@@ -26,8 +26,10 @@ repositories {
 
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web')
-    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
+    compile('org.springframework.boot:spring-boot-starter-web') {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compileOnly('javax.servlet:javax.servlet-api')
     compile('org.hibernate:hibernate-validator:5.2.4.Final')
 }
 
