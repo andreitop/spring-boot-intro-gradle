@@ -28,6 +28,12 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
 }
 
+bootJar {
+    baseName = "app"
+    version = ""
+    launchScript()
+}
+
 allprojects {
     apply plugin: 'idea'
     idea {
